@@ -1,0 +1,32 @@
+<div>
+
+<ul class="nav nav-tabs active" >
+
+
+<li class="nav-item" >
+    <a class="nav-link" (click)="onChoose('all')" style="cursor: pointer"
+    [ngClass] = "{active: chosenList === 'all'}">
+    All</a>
+  </li>
+<!-- the css class u want to assign is active, what comes after the
+: is the condition-->
+<li class="nav-item">
+      <a class="nav-link" (click)="onChoose('light')" style="cursor: pointer"
+      [ngClass] = "{active: chosenList === 'light'}">
+      Light</a>
+  </li>
+<li class="nav-item">
+        <a class="nav-link" (click)="onChoose('dark')" style="cursor: pointer"
+        [ngClass] = "{active: chosenList === 'dark'}">
+        Dark</a>
+  </li>
+
+</ul>
+<app-list
+[characters]="getCharacters()"
+(sideAssigned2) = onSideAssigned2($event)
+></app-list>
+<!-- you are calling the method getCharacters to get the value of characters
+in list.component.ts -->
+<!-- the getCharacters method is in the tabs.components.ts file -->
+</div>
