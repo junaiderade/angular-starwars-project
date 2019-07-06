@@ -1,5 +1,6 @@
-    <a href="#" class="list-group-item">
+    <a style="cursor: pointer" class="list-group-item"> <!-- this a tag used to be an href but u set the style so it gives u a nice looking cursor -->
         <h4 class="mb-1"> {{character.name}} </h4>
+        <!-- this character.name comes from the list component ngFor, there is also an input for it in item ts file -->
 <div>
 <button class="btn btn-primary" (click)= " onAssign('light')">Light</button>
 <button class="btn btn-danger" (click)= " onAssign('dark')">Dark</button>

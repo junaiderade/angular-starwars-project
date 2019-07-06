@@ -2,10 +2,10 @@
   <app-item
   *ngFor="let char of characters"
   [character]="char"
-  (sideAssigned) = "onSideAssigned($event)"
-  ></app-item>
-  <!-- for this the sideAssigned is a function from app-item
-  and it's value is equal to the name and assigned side  -->
-  <!-- the onSideAssigned methos is in list ts -->
+  >
+  <!-- this loop shows each item in list.char is the var name u assigned in the loop and characters is the name of the array  -->
+  <!-- the ngfor inside app item means it creates  an <app-item> for every character in the data-->
+  <!-- the [character] ="char" means that the word character in the app-item represents char from here -->
+</app-item>
 </div>
 

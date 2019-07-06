@@ -1,7 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-        <app-tabs></app-tabs>
+      <app-header></app-header>
+      <!-- <app-create-character></app-create-character> -->
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+        <!-- <app-tabs></app-tabs> -->
+        <router-outlet></router-outlet>
+        <!-- this is where angular puts the to-be loaded content,
+        this tells angular to load your root routes (from app module)
+      -->
     </div>
   </div>
 </div>
